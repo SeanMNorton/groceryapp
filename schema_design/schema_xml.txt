@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- SQL XML created by WWW SQL Designer, http://code.google.com/p/wwwsqldesigner/ -->
-<!-- Active URL: https://schemadesigner.devbootcamp.com/ -->
+<!-- Active URL: http://schemadesigner.devbootcamp.com/ -->
 <sql>
 <datatypes db="mysql">
   <group label="Numeric" color="rgb(238,238,170)">
@@ -32,63 +32,73 @@
     <type label="SET" length="1" sql="SET" quote=""/>
     <type label="Bit" length="0" sql="bit" quote=""/>
   </group>
-</datatypes><table x="470" y="133" name="List">
+</datatypes><table x="74" y="240" name="Users">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="store_id" null="1" autoincrement="0">
+<row name="username" null="1" autoincrement="0">
+<datatype>CHAR</datatype>
+<default>NULL</default></row>
+<row name="password" null="1" autoincrement="0">
+<datatype>CHAR</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="424" y="233" name="Lists">
+<row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Stores" row="id" />
+<default>NULL</default></row>
+<row name="name" null="1" autoincrement="0">
+<datatype>CHAR</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="219" y="122" name="User_lists">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="user_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="Users" row="id" />
+</row>
+<row name="list_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="Lists" row="id" />
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="873" y="181" name="Food_Items">
+<table x="750" y="237" name="Food_items">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="name" null="1" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
+<datatype>CHAR</datatype>
 <default>NULL</default></row>
-<row name="aisle_num" null="1" autoincrement="0">
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="568" y="107" name="Food_lists">
+<row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="list_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="List" row="id" />
+<default>NULL</default><relation table="Lists" row="id" />
 </row>
-<row name="store_id" null="1" autoincrement="0">
+<row name="food_item_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Stores" row="id" />
+<default>NULL</default><relation table="Food_items" row="id" />
 </row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="270" y="199" name="Stores">
-<row name="id" null="1" autoincrement="1">
+<row name="item_quantity" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="name" null="1" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="657" y="49" name="Create_Listing">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="id_List" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="List" row="id" />
-</row>
-<row name="id_Food_Items" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Food_Items" row="id" />
-</row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
