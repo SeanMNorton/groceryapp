@@ -96,10 +96,60 @@ form .login-submit:active {
   color: rgb(223,199,246);
 }
 
-/*
-@media only screen and (max-width: 800px) {
-  .main-container{
-    background-color: blue;
-  }
+/*============================================*/
+/*colored circles with letter*/
+.circles {
+  display: inline-block;
+}
 
+.circle {
+  font-family: Comfortaa;
+  display: inline-block;
+  margin-right: 3em;
+  text-align: center;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  display:table;
+  color: white;
+}
+
+#circle1 {
+  background-color: rgb(205,181,228);
+}
+
+#circle2 {
+  background-color: rgb(253, 227, 78);
+}
+
+#circle3 {
+  background-color: rgb(255, 118, 187);
+}
+
+/*#circle3 span {
+  position: relative;
+  bottom: 3px;
 }*/
+
+#circle4 {
+  background-color: rgb(104, 201, 253);
+}
+
+#circle5 {
+  background-color: rgb(254, 182, 79);
+}
+
+#circle6 {
+  background-color: rgb(255, 82, 77);
+}
+
+span {
+  font-size: 1.5em;
+  display:table-cell;
+  vertical-align: middle;
+}
+
+.hidden {
+  display: none;
+}
+/*============================================*/
