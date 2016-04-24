@@ -1,0 +1,19 @@
+#show .show-header {
+  font-family: Comfortaa;
+  font-size: 3em;
+  color: rgb(205,181,228);
+  text-align: center;
+  padding-top: 5%;
+}
+
+#show .show-title{
+  font-family: Comfortaa;
+  font-size: 2em;
+  color: rgb(205,181,228);
+  text-align: center;
+}
+
+#show .list-show{
+  border: 1px solid rgb(205,181,228);
+  background-color: white;
+}

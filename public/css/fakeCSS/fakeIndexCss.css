@@ -61,3 +61,11 @@ form .login-submit:hover {
 form .login-submit:active {
   color: rgb(223,199,246);
 }
+
+
+@media only screen and (max-width: 800px) {
+  .main-container{
+    background-color: blue;
+  }
+
+}
