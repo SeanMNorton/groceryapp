@@ -16,7 +16,7 @@ h2.main-title {
   font-size: 4em;
   color: rgb(205,181,228);
   text-align: center;
-  padding-top: 5em;
+  padding-top: 20%;
 }
 
 form.login-register {
@@ -33,12 +33,22 @@ form input[name=username], form input[name="password"] {
   display: block;
   width: 90%;
   font-size: 2em;
+  text-align: center;
   color: rgb(160, 150, 160);
   height: 2em;
   margin-right: auto;
   margin-left: auto;
   border: none;
+  border-width: 0px;
   border-radius: 1em;
+  -webkit-appearance: none;
+}
+
+form input:focus {
+  border: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  border-width: 0px;
 }
 
 form input[name=password] {
