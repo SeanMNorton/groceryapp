@@ -1,6 +1,9 @@
+===================================================
+Schema as of April 24th
+===================================================
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- SQL XML created by WWW SQL Designer, http://code.google.com/p/wwwsqldesigner/ -->
-<!-- Active URL: http://schemadesigner.devbootcamp.com/ -->
+<!-- Active URL: https://schemadesigner.devbootcamp.com/ -->
 <sql>
 <datatypes db="mysql">
   <group label="Numeric" color="rgb(238,238,170)">
@@ -32,7 +35,7 @@
     <type label="SET" length="1" sql="SET" quote=""/>
     <type label="Bit" length="0" sql="bit" quote=""/>
   </group>
-</datatypes><table x="74" y="240" name="Users">
+</datatypes><table x="49" y="172" name="Users">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -46,7 +49,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="424" y="233" name="Lists">
+<table x="477" y="273" name="Lists">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -57,7 +60,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="219" y="122" name="User_lists">
+<table x="270" y="259" name="User_lists">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -73,7 +76,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="750" y="237" name="Food_items">
+<table x="898" y="181" name="Food_items">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -84,7 +87,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="568" y="107" name="Food_lists">
+<table x="636" y="250" name="Food_lists">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -99,6 +102,43 @@
 <row name="item_quantity" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="259" y="17" name="Recipes">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="name" null="1" autoincrement="0">
+<datatype>CHAR</datatype>
+<default>NULL</default></row>
+<row name="description" null="1" autoincrement="0">
+<datatype>CHAR</datatype>
+<default>NULL</default></row>
+<row name="prep_instructions" null="1" autoincrement="0">
+<datatype>CHAR</datatype>
+<default>NULL</default></row>
+<row name="user_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="Users" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="617" y="55" name="Recipe_Food">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="id_Recipes" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="Recipes" row="id" />
+</row>
+<row name="id_Food_items" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="Food_items" row="id" />
+</row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
