@@ -4,7 +4,7 @@ html {
 
 nav {
   width:100%;
-  height:6%;
+  height:8%;
   background-color: white;
 }
 
@@ -17,7 +17,7 @@ nav .menu_container{
 nav .menu_title{
   display: inline-block;
   color: rgb(86,66,105);
-  margin-top: 1%;
+  margin-top: 10px;
   font-size: 3em;
 }
 nav a{
@@ -31,7 +31,7 @@ nav .menu_button{
   display: inline-block;
   float: right;
   position: relative;
-  padding-top: 4%;
+  padding-top: 20px;
   margin: auto;
   font-size: 1.3em;
 }
