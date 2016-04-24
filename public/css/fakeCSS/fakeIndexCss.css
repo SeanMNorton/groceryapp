@@ -24,11 +24,9 @@ form.login-register {
   padding: .3  em;
   margin: auto;
 }
-
 form input[name=username] {
   margin-bottom: .6em;
 }
-
 form input[name=username], form input[name="password"] {
   display: block;
   width: 90%;
@@ -39,44 +37,27 @@ form input[name=username], form input[name="password"] {
   margin-right: auto;
   margin-left: auto;
   border: none;
-  border-width: 0px;
   border-radius: 1em;
-  -webkit-appearance: none;
-}
-
-form input:focus {
-  border: none;
-  box-shadow: none;
-  -webkit-appearance: none;
-  border-width: 0px;
+  outline: none;
 }
 
 form input[name=password] {
   margin-bottom: .5em;
 }
-
-form p {
-  color: rgb(205,181,228);
-  /*font-family: Snippet;
-  font-family: Poiret One;*/
+form .login-submit {
+  background: none;
   font-family: Comfortaa;
   font-size: 2.5em;
-  padding     : 0px;
-  width: 50%;
-  margin-left: 25%;
-  text-align: center;
-}
-
-form a {
   text-decoration: none;
   color: rgb(205,181,228);
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-top: 5%;
 }
-
-form a:active {
+form .login-submit:hover {
+ color: rgb(223,199,246);
+}
+form .login-submit:active {
   color: rgb(223,199,246);
 }
-/*
-form input[type=submit]:active {
-  border: none;
-  box-shadow: none;
-}*/
