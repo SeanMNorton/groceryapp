@@ -5,8 +5,9 @@
 
     <%@user.lists.each do |list|%>
       <div class='list-show'>
-        <!--add link to list below!-->
-        <a href="#"><%=list.name%></a>
+        <div class="list_info">
+          <a href="#"><%=list.name%></a>
+        </div>
       </div>
     <%end%>
 </div>
