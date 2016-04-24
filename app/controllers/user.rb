@@ -7,5 +7,7 @@ end
 
 get '/users/:id' do
   @user = User.find(params[:id])
+  p @user
+  p @user.lists
   erb :"user/show"
 end
