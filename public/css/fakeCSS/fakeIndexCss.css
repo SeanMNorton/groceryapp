@@ -31,13 +31,13 @@ nav .menu_button{
   display: inline-block;
   float: right;
   position: relative;
-  padding-top: 20px;
+  padding-top: 30px;
   margin: auto;
   font-size: 1.3em;
 }
 
 .main-container {
-  width: 49em;
+  max-width: 49em;
   height: 81em;
   margin: auto;
   background-color: rgb(86,66,105);
