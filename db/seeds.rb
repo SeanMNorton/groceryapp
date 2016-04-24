@@ -36,10 +36,10 @@ all_foods = [
   "Eggs"
 ]
 
-user1 = User.create!( :username => Faker::Superhero.name,
+user1 = User.create!( :username => 'Jon',
                       :password_hash => 'password')
 
-user2 = User.create!( :username => Faker::Superhero.name,
+user2 = User.create!( :username => 'Sean',
                       :password_hash => 'password')
 
 2.times.map do
@@ -48,6 +48,17 @@ user2 = User.create!( :username => Faker::Superhero.name,
 
 
   list = user1.lists.create!(:name => selected_list.pop)
+  rand(3..7).times.map do
+    food = list.foods.find_or_create_by(:name => selected_foods.pop)
+  end
+end
+
+2.times.map do
+  selected_list = all_lists.shuffle
+  selected_foods = all_foods.shuffle
+
+
+  list = user2.lists.create!(:name => selected_list.pop)
   rand(3..7).times.map do
     food = list.foods.find_or_create_by(:name => selected_foods.pop)
   end
