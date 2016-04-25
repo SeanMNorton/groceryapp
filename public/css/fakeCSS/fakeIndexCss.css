@@ -37,7 +37,8 @@ nav .menu_button{
 }
 
 .main-container {
-  max-width: 49em;
+  /*max-width: 49em;*/
+  max-width: 100%;
   height: 81em;
   margin: auto;
   background-color: rgb(86,66,105);
