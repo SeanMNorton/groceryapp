@@ -8,6 +8,16 @@
         <div class="list_info">
           <a href="/list/<%=list.id%>"><%=list.name%></a>
         </div>
+        <table class="circles">
+          <tr>
+            <td class="circle" id="circle<%=@nums.sample%>"><p class='letter'><%=list.users.first.username[0]%></p>
+            </td>
+            <td class="circle" id="circle<%=@nums.sample%>"><p class='letter'>P</p>
+            </td>
+            <td class="circle" id="circle<%=@nums.sample%>"><p class='letter'>M</p>
+            </td>
+          </tr>
+        </table>
       </div>
     <%end%>
 </div>

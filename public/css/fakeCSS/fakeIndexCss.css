@@ -101,17 +101,18 @@ form .login-submit:active {
 /*colored circles with letter*/
 .circles {
   display: inline-block;
+  position: absolute;
+  right: 1em;
+  bottom: 1px;
+  /*top: 1px;*/
 }
 
 .circle {
+  display: table-cell;
   font-family: Comfortaa;
-  display: inline-block;
-  margin-right: 3em;
-  text-align: center;
-  width: 3em;
-  height: 3em;
+  width: 2em;
+  height: 2em;
   border-radius: 50%;
-  display:table;
   color: white;
 }
 
@@ -144,10 +145,11 @@ form .login-submit:active {
   background-color: rgb(255, 82, 77);
 }
 
-span {
-  font-size: 1.5em;
-  display:table-cell;
-  vertical-align: middle;
+p.letter {
+  font-size: 1em;
+  display: table-cell;
+  position: relative;
+  left: 8px;
 }
 
 .hidden {
