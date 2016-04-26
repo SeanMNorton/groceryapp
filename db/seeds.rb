@@ -34,33 +34,19 @@ all_items = [
   "Salt",
   "Milk",
   "Eggs"
-]
+].map { |name| Item.create!(name: name) }
 
-user1 = User.create!( :username => 'Jon',
-                      :password_hash => 'password')
+users = [User.create!( :username => 'Jon',
+                      :password_hash => 'password'),
+         User.create!( :username => 'Sean',
+                      :password_hash => 'password')]
 
-user2 = User.create!( :username => 'Sean',
-                      :password_hash => 'password')
+users.each do |user|
+  all_lists.sample(2).map do |list_name|
+    list = user.lists.create!(:name => list_name)
 
-2.times.map do
-  selected_list = all_lists.shuffle
-  selected_items = all_items.shuffle
-
-
-  list = user1.lists.create!(:name => selected_list.pop)
-  rand(3..7).times.map do
-    
-    # items = list.items.find_or_create_by(:name => selected_items.pop)
+    list.items = all_items.sample(rand(3..7))
+    list.save
   end
-end
 
-2.times.map do
-  selected_list = all_lists.shuffle
-  selected_items = all_items.shuffle
-
-
-  list = user2.lists.create!(:name => selected_list.pop)
-  rand(3..7).times.map do
-    item = list.items.find_or_create_by(:name => selected_items.pop)
-  end
 end
