@@ -1,6 +1,5 @@
 class Collaborator < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :list
-
-  validates :user_id, :list_id, presence: true
+  # Remember to create a migration!
+  belongs_to :collaborator, class_name: "User" ## good to go
+  belongs_to :list # good to go
 end

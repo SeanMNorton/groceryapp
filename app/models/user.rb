@@ -1,8 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :collaborators
-  has_many :lists, through: :collaborators
-  has_many :recipes
-
-  validates :username, :password_hash, presence: true
-  validates :username, uniqueness: true
+  # Remember to create a migration!
+  has_many :collaborators ## dont' know about this one
+  has_many :lists, source: :owner ## don't know about this one
+  has_many :recipes, source: :author ## don't know about this one
 end
