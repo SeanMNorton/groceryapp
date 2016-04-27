@@ -4,6 +4,7 @@ require 'faker'
 User.destroy_all
 List.destroy_all
 Item.destroy_all
+Recipe.destroy_all
 
 all_lists = [
   "Jewel Osco - Sunday",
@@ -36,6 +37,18 @@ all_items = [
   "Eggs"
 ].map { |name| Item.create!(name: name) }
 
+
+all_recipes = [
+  "Ma's Homemade Chili",
+  'BMT',
+  "Breakfast Burrito",
+  "Moscow Mules",
+  "Pina Colada",
+  "Oven Baked Pizza",
+  "Tacos!",
+  "Recipe for Disaster"
+]
+
 users = [User.create!( :username => 'Jon',
                       :password_hash => 'password'),
          User.create!( :username => 'Sean',
@@ -47,6 +60,13 @@ users.each do |user|
 
     list.items = all_items.sample(rand(3..7))
     list.save
+  end
+
+  all_recipes.sample(2).map do |recipe_name|
+    recipe = user.recipes.create!(:name => recipe_name)
+
+    recipe.items = all_items.sample(rand(3..7))
+    recipe.save
   end
 
 end
